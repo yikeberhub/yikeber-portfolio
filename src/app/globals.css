@@ -1,33 +1,36 @@
 /* src/app/globals.css */
 @import "tailwindcss";
 
-/* Import your custom tokens */
-@import "../styles/tokens.css";
-
-/* Custom theme configuration for Tailwind v4 */
-@theme {
-  --color-background: rgb(var(--color-bg));
-  --color-surface: rgb(var(--color-surface));
-  --color-border: rgb(var(--color-border) / 0.1);
-  --color-foreground: rgb(var(--color-fg));
-  --color-muted: rgb(var(--color-muted));
-  --color-subtle: rgb(var(--color-subtle));
-  --color-accent: rgb(var(--color-accent));
-  --color-accent-hover: rgb(var(--color-accent-hover));
-
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-
-  --radius-xl: 12px;
-  --radius-2xl: 16px;
+:root {
+  --dot-grid-size: 28px;
+  --dot-grid-dot-size: 2px;
+  --dot-grid-color: rgba(255, 255, 255, 0.04);
 }
 
-/* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgb(var(--color-bg));
-  color: rgb(var(--color-fg));
+  background-color: #030712;
+  color: #F9FAFB;
+}
+
+/* Dot grid utility */
+.bg-dot-grid {
+  background-image: radial-gradient(
+    circle at var(--dot-grid-dot-size) var(--dot-grid-dot-size),
+    var(--dot-grid-color) var(--dot-grid-dot-size),
+    transparent 0
+  );
+  background-size: var(--dot-grid-size) var(--dot-grid-size);
+}
+
+/* Hero glow utility */
+.bg-hero-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(124, 58, 237, 0.25),
+    transparent 70%
+  );
 }
