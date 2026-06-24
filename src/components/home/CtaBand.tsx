@@ -1,23 +1,40 @@
-// src/components/home/CtaBand.tsx
-import { Button } from '@/components/ui/Button'
+// src/components/layout/CtaBand.tsx
+"use client";
 
-export function CtaBand() {
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
+export default function CtaBand() {
   return (
-    <section className="py-20 px-4 md:px-8 bg-gray-800">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Let’s build your next product</h2>
-        <p className="text-gray-300 mb-8">
-          I design and build software that solves real business problems.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button variant="primary" size="lg">
-            Contact me
-          </Button>
-          <Button variant="secondary" size="lg">
-            View my work
-          </Button>
-        </div>
+    <section className="relative bg-[#0B1120] py-16">
+      <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            Ready to build something{" "}
+            <span className="bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent">
+              amazing together?
+            </span>
+          </h2>
+          <p className="mt-3 text-gray-400">
+            Let's discuss your project and turn your ideas into reality.
+          </p>
+          <div className="mt-6">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#7C3AED] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#8B5CF6]"
+            >
+              Get in touch
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,11 +1,12 @@
 // src/app/page.tsx
-import Hero  from '@/components/home/Hero'
-import { CredibilitySection } from '@/components/home/CredibilitySection'
-import { ProcessSteps } from '@/components/home/ProcessSteps'
-import { CaseStudyLayout } from '@/components/home/CaseStudyLayout'
-import { ServicesPreview } from '@/components/home/ServicesPreview'
-import { ExperienceEntry } from '@/components/home/ExperienceEntry'
-import { CtaBand } from '@/components/home/CtaBand'
+import Hero from '@/components/home/Hero';
+import TrustStrip from '@/components/home/TrustStrip';
+import FeaturedProjects from '@/components/home/FeaturedProjects';
+import CredibilitySection from '@/components/home/CredibilitySection';
+import ProcessSteps from '@/components/home/ProcessSteps';
+import ServicesPreview from '@/components/home/ServicesPreview';
+import CtaBand from '@/components/home/CtaBand';
+import FeatureCallout from '@/components/home/FeatureCallout';
 
 export default function Home() {
   return (
@@ -13,22 +14,15 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Credibility Section */}
-      <CredibilitySection />
+      
 
-      {/* Core Expertise */}
-      <ProcessSteps />
-
-      {/* Featured Project (Case Study) */}
-      <CaseStudyLayout />
-
-      {/* Services Preview */}
+      {/* trustStrip Section */}
+      <TrustStrip />
+      <FeatureCallout />         
+      <FeaturedProjects />
       <ServicesPreview />
-
-      {/* Experience Highlights */}
-      <ExperienceEntry />
-
-      {/* Final CTA */}
+      <ProcessSteps />
+      <CredibilitySection />
       <CtaBand />
     </div>
   )

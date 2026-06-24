@@ -1,11 +1,10 @@
-// src/components/home/Hero.tsx
+// src/components/home/Hero.tsx (without stats)
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon, TelegramIcon, MailIcon } from "@/components/ui/icons";
-import { Briefcase, Sparkles, Star, CheckCircle } from "lucide-react";
 
 const socials = [
   { href: "https://github.com/yourhandle", icon: GithubIcon, label: "GitHub" },
@@ -14,30 +13,13 @@ const socials = [
   { href: "mailto:yikebermisganaw.dev@gmail.com", icon: MailIcon, label: "Email" },
 ];
 
-const stats = [
-  { label: "Years Experience", value: "3+", icon: Briefcase },
-  { label: "Projects Delivered", value: "10+", icon: Sparkles },
-  { label: "Technologies", value: "5+", icon: Star },
-  { label: "Client Satisfaction", value: "100%", icon: CheckCircle },
-];
-
 // Animation variants
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-// For scroll animations with delay
 const fadeUpScroll = (delay: number = 0) => ({
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { 
-      delay, 
-      duration: 0.6,
-      ease: "easeOut" 
-    }
+    transition: { delay, duration: 0.6, ease: "easeOut" },
   },
 });
 
@@ -45,7 +27,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#030712] pt-32 pb-20 sm:pt-40 sm:pb-28">
       
-      {/* Hero Glow - on load animation */}
+      {/* Hero Glow */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -56,10 +38,8 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         
-        {/* ---------- Left column ---------- */}
+        {/* Left column */}
         <div className="flex flex-col items-start">
-          
-          {/* Status badge - on load + scroll */}
           <motion.span
             initial="hidden"
             animate="visible"
@@ -71,7 +51,6 @@ export default function Hero() {
             Software Engineer
           </motion.span>
 
-          {/* Heading - on load + scroll */}
           <motion.h1
             initial="hidden"
             animate="visible"
@@ -86,7 +65,6 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* Subheading - on load + scroll */}
           <motion.p
             initial="hidden"
             animate="visible"
@@ -100,7 +78,6 @@ export default function Hero() {
             &amp; automation systems.
           </motion.p>
 
-          {/* Description - on load + scroll */}
           <motion.p
             initial="hidden"
             animate="visible"
@@ -113,7 +90,6 @@ export default function Hero() {
             solutions that solve real world problems and drive business growth.
           </motion.p>
 
-          {/* CTAs - on load + scroll */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -156,7 +132,6 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Social Icons - on load + scroll */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -187,34 +162,9 @@ export default function Hero() {
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Stats - on load + scroll */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            variants={fadeUpScroll(0.7)}
-            className="mt-12 grid w-full grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-4"
-          >
-            {stats.map(({ label, value, icon: Icon }) => (
-              <motion.div
-                key={label}
-                whileHover={{ y: -4, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-                className="flex flex-col gap-1"
-              >
-                <div className="flex items-center gap-2 flex-row">
-                  <Icon size={18} strokeWidth={1.8} className="text-[#7C3AED]" />
-                  <span className="text-2xl font-bold text-white">{value}</span>
-                </div>
-                <span className="text-xs leading-snug text-gray-500">{label}</span>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
 
-        {/* ---------- Right column: portrait ---------- */}
+        {/* Right column: portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -223,14 +173,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="relative mx-auto w-full max-w-[420px]"
         >
-          {/* Dot grid */}
           <div
             aria-hidden
             className="absolute inset-0 -z-5 rounded-lg bg-dot-grid"
             style={{ transform: 'scale(1.15)' }}
           />
-
-          {/* Glow behind portrait */}
           <div
             aria-hidden
             className="absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2"
@@ -240,8 +187,6 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full bg-[#7C3AED]/10 blur-[100px]" />
             <div className="absolute inset-[30%] rounded-full bg-[#8B5CF6]/10 blur-[70px]" />
           </div>
-
-          {/* Rim light */}
           <div
             aria-hidden
             className="absolute left-1/2 top-1/2 -z-5 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2"
@@ -250,8 +195,6 @@ export default function Hero() {
             <div className="absolute inset-[20%] rounded-full bg-gradient-to-br from-[#7C3AED]/30 via-[#8B5CF6]/20 to-transparent blur-[60px]" />
             <div className="absolute inset-[40%] rounded-full bg-[#7C3AED]/20 blur-[40px]" />
           </div>
-
-          {/* The person */}
           <motion.div
             whileHover={{ 
               scale: 1.04,
@@ -267,8 +210,6 @@ export default function Hero() {
               className="object-contain drop-shadow-2xl drop-shadow-purple-600/30"
             />
           </motion.div>
-
-          {/* Availability badge */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
