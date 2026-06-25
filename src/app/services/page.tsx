@@ -16,7 +16,7 @@ import {
 import { services } from "@/data/services";
 
 // Map icon strings to Lucide components
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ElementType> = {
   Send: Send,
   Cpu: Cpu,
   Database: Database,

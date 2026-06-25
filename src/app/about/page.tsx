@@ -31,14 +31,14 @@ import {
   MailIcon,
 } from "@/components/ui/icons";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ElementType> = {
   Database: Server,
   Layout: Layout,
   Server: Server,
   Bot: Bot,
 };
 
-const socialIconMap: Record<string, any> = {
+const socialIconMap: Record<string, React.ElementType> = {
   Github: GithubIcon,
   LinkedIn: LinkedinIcon,
   Telegram: TelegramIcon,

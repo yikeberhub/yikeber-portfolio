@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import {
   Mail,
   Send,
@@ -14,7 +13,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
-import {LinkedinIcon, GithubIcon} from "@/components/ui/icons";
+import {LinkedinIcon} from "@/components/ui/icons";
 
 const fadeUpScroll = (delay: number = 0) => ({
   hidden: { opacity: 0, y: 20 },
@@ -139,7 +138,7 @@ export default function ContactPage() {
           variants={fadeUpScroll(0.1)}
           className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {contactMethods.map((method, index) => (
+          {contactMethods.map((method) => (
             <motion.a
               key={method.label}
               href={method.href}
@@ -276,7 +275,7 @@ export default function ContactPage() {
               <p className="mt-1 text-sm text-muted">Reach me directly via:</p>
 
               <div className="mt-6 space-y-4">
-                {directInfo.map((item, index) => (
+                {directInfo.map((item) => (
                   <motion.a
                     key={item.label}
                     href={item.href}
