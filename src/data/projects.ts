@@ -59,8 +59,8 @@ export const projects: Project[] = [
     image: "/projects/ecommerce/home.png",
     screenshots: [
       "/projects/ecommerce/home.png",
-      "/projects/ecommerce/products.png",
-      "/projects/ecommerce/product_detail.png",
+      "/projects/ecommerce/products.jpg",
+      "/projects/ecommerce/product_detail2.png",
       "/projects/ecommerce/order_summary.png",
       "/projects/ecommerce/admin_stat.png",
     ],
