@@ -1,8 +1,15 @@
 // src/components/home/CredibilitySection.tsx
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Award, GraduationCap, Calendar, ArrowUpRight } from "lucide-react";
+import {
+  Award,
+  GraduationCap,
+  Calendar,
+  ArrowUpRight,
+  ExternalLink,
+} from "lucide-react";
 import Link from "next/link";
 
 const fadeUpScroll = (delay: number = 0) => ({
@@ -16,24 +23,22 @@ const fadeUpScroll = (delay: number = 0) => ({
 
 const education = {
   title: "BSc in Software Engineering",
-  period: "2016 – 2020",
+  period: "2021 – 2025",
   description:
-    "Graduated with a focus on artificial intelligence, data structures, algorithms, and system design.",
+    "Graduated from Bahir Dar University with a strong foundation in software engineering principles, system design, database systems, algorithms, and full-stack application development.",
 };
 
 const recognition = {
-  title: "Top 3 Projects in Software Engineering Department",
-  period: "2023",
+  title: "3rd Place Final Year Project Award",
+  period: "2025",
   description:
-    "Full Year Project Recognition for outstanding contribution and innovation.",
+    "Awarded 3rd Place in the Software Engineering Faculty Final Year Project Competition for Balemuya, a location-based service marketplace connecting customers with verified professionals through real-time matching and booking workflows.",
 };
 
 export default function CredibilitySection() {
   return (
-    <section
-      className="relative bg-linear-to-b from-[rgb(var(--color-bg))] to-[rgb(var(--color-surface))] py-20"
-    >
-      {/* Subtle glow – keep accent color, it's fine */}
+    <section className="relative bg-linear-to-b from-[rgb(var(--color-bg))] to-[rgb(var(--color-surface))] py-20">
+      {/* Subtle glow */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-linear-to-r from-transparent via-[#7C3AED]/20 to-transparent" />
         <div className="absolute left-1/2 top-1/2 h-125 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7C3AED]/5 blur-[140px]" />
@@ -49,10 +54,11 @@ export default function CredibilitySection() {
           className="text-center"
         >
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-            My Background
+            Education & Recognition
           </h2>
           <p className="mt-2 text-muted">
-            A foundation built on education and recognition.
+            The academic foundation and achievements behind the platforms and
+            systems I build today.
           </p>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-linear-to-r from-[#7C3AED] to-[#8B5CF6]" />
         </motion.div>
@@ -92,7 +98,7 @@ export default function CredibilitySection() {
             </div>
           </motion.div>
 
-          {/* Recognition */}
+          {/* Recognition + Certificate */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -105,7 +111,6 @@ export default function CredibilitySection() {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#7C3AED]/10">
                 <Award className="h-6 w-6 text-[#7C3AED]" />
               </div>
-              {/* No line after the last item */}
             </div>
 
             {/* Content */}
@@ -122,6 +127,45 @@ export default function CredibilitySection() {
               <p className="mt-2 max-w-xl text-muted">
                 {recognition.description}
               </p>
+
+              {/* 🏆 Certificate Card */}
+              <motion.div
+                variants={fadeUpScroll(0.25)}
+                className="mt-4 rounded-xl border border-[#7C3AED]/20 bg-[#7C3AED]/5 p-4 transition-all hover:border-[#7C3AED]/40"
+              >
+                <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                  {/* Certificate Thumbnail */}
+                  <div className="relative w-full max-w-[120px] overflow-hidden rounded-lg border border-border/10 shadow-md">
+                    <Image
+                      src="/certificates/balemuya-certificate.png"
+                      alt="Balemuya Certificate - 3rd Place"
+                      width={120}
+                      height={85}
+                      className="h-auto w-full object-cover"
+                    />
+                  </div>
+
+                  <div>
+                    <div className="inline-flex items-center gap-1.5">
+                      <Award className="h-4 w-4 text-[#7C3AED]" />
+                      <span className="text-sm font-medium text-foreground">
+                        3rd Place - Software Engineering Competition
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted">
+                      Awarded for Balemuya project • Bahir Dar University, 2025
+                    </p>
+                    <a
+                      href="/certificates/balemuya-certificate.png"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-[#7C3AED] transition-colors hover:text-[#8B5CF6]"
+                    >
+                      View Certificate <ExternalLink size={12} />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
