@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { FileText,GithubIcon, LinkedinIcon, TelegramIcon, MailIcon } from "@/components/ui/icons";
 
 const socials = [
-  { href: "https://github.com/yourhandle", icon: GithubIcon, label: "GitHub" },
-  { href: "https://linkedin.com/in/yourhandle", icon: LinkedinIcon, label: "LinkedIn" },
-  { href: "https://t.me/yikeber_dev", icon: TelegramIcon, label: "Telegram" },
-  { href: "mailto:yikebermisganaw.dev@gmail.com", icon: MailIcon, label: "Email" },
+  { href: "https://github.com/yikeberhub", icon: GithubIcon, label: "GitHub" },
+  { href: "https://linkedin.com/in/yikeber-misganaw-735887261", target: "_blance", icon: LinkedinIcon, label: "LinkedIn" },
+  { href: "https://t.me/just_du1t", icon: TelegramIcon, label: "Telegram" },
+  { href: "mailto:yikeber50@gmail.com", icon: MailIcon, label: "Email" },
 ];
 
 // Tech stack for animated tags
