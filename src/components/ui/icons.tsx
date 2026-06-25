@@ -7,10 +7,24 @@ export function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function FileText(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M3 15.998h18v-2H3v2Zm0 4h18v-2H3v2ZM3 7V5h18v2H3Zm0 8h18v-2H3v2Zm0 4h18v-2H3v2Zm0 4h18v-2H3v2Z" />
+    </svg>
+  );
+}
+
 export function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34V10H5.67v8.34h2.67Zm-1.33-9.48c.86 0 1.4-.57 1.4-1.28-.02-.73-.54-1.28-1.39-1.28-.84 0-1.4.55-1.4 1.28 0 .71.54 1.28 1.38 1.28h.01Zm12.32 9.48v-4.78c0-2.56-1.37-3.76-3.2-3.76-1.48 0-2.14.82-2.5 1.39v-1.2H10.3c.04.79 0 8.35 0 8.35h2.67v-4.66c0-.25.02-.5.1-.68.2-.5.66-1.03 1.44-1.03 1.02 0 1.43.78 1.43 1.91v4.46h2.67Z" />
+      <path
+ d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34V10H5.67v8.34h2.67Zm-1.33-9.48c.86 0 1.4-.57 1.4-1.28-.02-.73-.54-1.28-1.39-1.28-.84 0-1.4.55-1.4 1.28 0 .71.54 1.28 1.38 1.28h.01Zm12.32 9.48v-4.78c0-2.56-1.37-3.76-3.2-3.76-1.48 0-2.14.82-2.5 1.39v-1.2H10.3c.04.79 0 8.35 0 8.35h2.67v-4.66c0-.25.02-.5.1-.68.2-.5.66-1.03 1.44-1.03 1.02 0 1.43.78 1.43 1.91v4.46h2.67Z" />
     </svg>
   );
 }

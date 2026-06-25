@@ -1,22 +1,67 @@
 /* src/app/globals.css */
 @import "tailwindcss";
 
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+
+/* Dark mode (default) */
 :root {
+  /* Backgrounds */
+  --color-bg: 3 7 18;
+  --color-text: 249 250 251;
+  --color-surface: 11 17 32;
+  --color-border: 31 41 55;
+  --color-muted: 156 163 175;
+
+  /* Dot grid */
   --dot-grid-size: 28px;
   --dot-grid-dot-size: 2px;
-  --dot-grid-color: rgba(255, 255, 255, 0.04);
+  --dot-grid-color: rgba(255, 255, 255, 0.06);
 }
+
+/* Light mode */
+.light {
+  --color-bg: 255 255 255;
+  --color-text: 3 7 18;
+  --color-surface: 245 245 245;
+  --color-border: 229 231 235;
+  --color-muted: 107 114 128;
+
+  /* Light mode dot grid – darker dots */
+  --dot-grid-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   REGISTER COLORS WITH TAILWIND
+   ============================================ */
+
+@theme {
+  --color-background: rgb(var(--color-bg));
+  --color-foreground: rgb(var(--color-text));
+  --color-surface: rgb(var(--color-surface));
+  --color-border: rgb(var(--color-border));
+  --color-muted: rgb(var(--color-muted));
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #030712;
-  color: #F9FAFB;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dot grid utility */
+/* ============================================
+   UTILITY: DOT GRID
+   ============================================ */
+
 .bg-dot-grid {
   background-image: radial-gradient(
     circle at var(--dot-grid-dot-size) var(--dot-grid-dot-size),
@@ -26,11 +71,34 @@ body {
   background-size: var(--dot-grid-size) var(--dot-grid-size);
 }
 
-/* Hero glow utility */
+/* ============================================
+   UTILITY: HERO GLOW
+   ============================================ */
+
 .bg-hero-glow {
   background: radial-gradient(
     circle at center,
     rgba(124, 58, 237, 0.25),
     transparent 70%
   );
+}
+
+/* ============================================
+   UTILITY: TEXT COLORS (for direct use)
+   ============================================ */
+
+.text-foreground {
+  color: rgb(var(--color-text));
+}
+
+.text-muted {
+  color: rgb(var(--color-muted));
+}
+
+/* ============================================
+   UTILITY: BORDER
+   ============================================ */
+
+.border-border {
+  border-color: rgb(var(--color-border));
 }

@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
+import {ThemeToggle}  from "@/components/ui/ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
-  { href: "/experience", label: "Experience" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,16 +34,14 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/10 bg-[#030712]/70 backdrop-blur-md"
+          ? "border-b border-border/10 bg-background/70 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 lg:px-8">
+      <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#7C3AED]/10 text-sm font-bold text-[#7C3AED]">
-            YM
-          </span>
+          <Logo variant="default" showText={true} />
         </Link>
 
         {/* Desktop links */}
@@ -56,7 +55,7 @@ export default function Navbar() {
                   className={`text-sm font-medium transition-colors ${
                     active
                       ? "text-[#7C3AED]"
-                      : "text-gray-400 hover:text-[#7C3AED] hover:underline"
+                      : "text-muted hover:text-foreground"
                   }`}
                 >
                   {label}
@@ -66,19 +65,19 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* CTA */}
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <Link
             href="/contact"
-            className="hidden rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#8B5CF6] md:inline-flex"
+            className="hidden rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-[#8B5CF6] md:inline-flex"
           >
-            Let&apos;s Talk
+            Let's Talk
           </Link>
 
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border/10 text-foreground md:hidden"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -87,7 +86,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="border-t border-white/10 bg-[#0B1120] px-6 py-6 md:hidden">
+        <div className="border-t border-border/10 bg-surface px-6 py-6 md:hidden">
           <ul className="flex flex-col gap-4">
             {NAV_LINKS.map(({ href, label }) => {
               const active = pathname === href;
@@ -96,7 +95,7 @@ export default function Navbar() {
                   <Link
                     href={href}
                     className={`block text-sm font-medium ${
-                      active ? "text-[#7C3AED]" : "text-gray-400"
+                      active ? "text-[#7C3AED]" : "text-muted"
                     }`}
                   >
                     {label}
@@ -107,9 +106,9 @@ export default function Navbar() {
             <li>
               <Link
                 href="/contact"
-                className="mt-2 inline-flex w-full justify-center rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-white"
+                className="mt-2 inline-flex w-full justify-center rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-foreground"
               >
-                Let&apos;s Talk
+                Let's Talk
               </Link>
             </li>
           </ul>

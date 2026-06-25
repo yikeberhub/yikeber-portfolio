@@ -50,9 +50,9 @@ I believe in writing clean, maintainable code that not only works but also deliv
     field: "Software Engineering",
     institution: "Bahir Dar University",
     location: "Ethiopia",
-    year: "2016 – 2020",
+    year: "2021 – 2025",
     description:
-      "Graduated with a focus on artificial intelligence, data structures, algorithms, and system design. Completed a Full Year Project that was recognized among the top 3 in the Software Engineering Department.",
+      "Graduated with a focus on Web Development,Application Development, artificial intelligence, data structures, algorithms, and system design. Completed a Full Year Project that was recognized as the top 3 final year project in the Computing faculity.",
   },
 
   philosophy:
@@ -70,18 +70,27 @@ I believe in writing clean, maintainable code that not only works but also deliv
       items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
     },
     {
-      category: "Database & DevOps",
-      icon: "Server",
-      items: ["PostgreSQL", "MySQL", "Redis", "Docker", "Git", "AWS"],
+      category: "Ai & Automation",
+      icon: "Robot",
+      items: ["ChatGPT", "OpenAI","n8n","langchain", "TensorFlow", "PyTorch", "OpenCV"],
     },
     {
-      category: "Specialized",
-      icon: "Bot",
-      items: ["Telegram Bot API", "Celery", "WebSockets", "REST APIs"],
+      category: "Version Control",
+      icon: "Git",
+      items: ["Git", "GitHub", "GitLab", "Bitbucket"],
+    },
+    {
+      category: "Database & DevOps",
+      icon: "Server",
+      items: ["PostgreSQL", "MySQL", "Redis","RabbitMQ",  "Docker", "Git", "AWS"],
+    },
+    {
+      category: "Language",
+      icon: "Language",
+      items: ["English", "Amharic"],
     },
   ],
 
-  // ✅ NEW: Personal info
   personal: {
     email: "yikeber50@gmail.com",
     phone: "+251 946 472 687",
@@ -90,17 +99,15 @@ I believe in writing clean, maintainable code that not only works but also deliv
     timezone: "GMT+3 (East Africa Time)",
   },
 
-  // ✅ NEW: Social links
   social: [
-    { label: "GitHub", href: "https://github.com/yourhandle", icon: "Github" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/yourhandle", icon: "LinkedIn" },
-    { label: "Telegram", href: "https://t.me/yikeber_dev", icon: "Telegram" },
+    { label: "GitHub", href: "https://github.com/yikeberhub", icon: "Github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/yikeber-misganaw-735887261/", icon: "LinkedIn" },
+    { label: "Telegram", href: "https://t.me/just_du1t", icon: "Telegram" },
     { label: "WhatsApp", href: "https://wa.me/251946472687", icon: "WhatsApp" },
   ],
 
   funFacts: [
     "🎓 Graduated from Bahir Dar University with a BSc in Software Engineering",
-    "🏆 Full Year Project recognized among Top 3 in the department",
     "🤖 Love building Telegram bots that automate real-world workflows",
     "☕ Coffee enthusiast – it fuels my code",
     "📚 Continuous learner — always exploring new technologies",

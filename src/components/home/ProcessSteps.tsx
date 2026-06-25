@@ -28,11 +28,11 @@ const steps = [
 
 export default function ProcessSteps() {
   return (
-    <section className="py-20 bg-[#030712]">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">My Process</h2>
-          <p className="mt-2 text-gray-400">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">My Process</h2>
+          <p className="mt-2 text-muted">
             How I turn ideas into reality.
           </p>
         </div>
@@ -52,12 +52,12 @@ export default function ProcessSteps() {
                   {step.number}
                 </span>
                 <div>
-                  <h3 className="text-lg font-semibold text-white">{step.title}</h3>
-                  <p className="text-sm text-gray-400">{step.description}</p>
+                  <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
+                  <p className="text-sm text-muted">{step.description}</p>
                 </div>
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute left-16 top-6 h-[2px] w-[calc(100%-64px)] bg-gradient-to-r from-[#7C3AED]/30 to-transparent" />
+                <div className="hidden lg:block absolute left-16 top-6 h-0.5 w-[calc(100%-64px)] bg-linear-to-r from-[#7C3AED]/30 to-transparent" />
               )}
             </motion.div>
           ))}

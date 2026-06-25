@@ -10,7 +10,7 @@ interface ButtonProps {
 
 export const Button: FC<ButtonProps> = ({ variant = 'primary', size = 'lg', children, className }) => {
   const baseClasses = 'font-medium rounded-lg transition-colors duration-200'
-  const primaryClasses = 'bg-blue-600 hover:bg-blue-700 text-white'
+  const primaryClasses = 'bg-blue-600 hover:bg-blue-700 text-foreground'
   const secondaryClasses = 'bg-gray-700 hover:bg-gray-600 text-gray-200'
   const sizeClasses = {
     lg: 'px-6 py-3 text-lg',

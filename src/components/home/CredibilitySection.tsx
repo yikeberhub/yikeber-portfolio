@@ -10,7 +10,7 @@ const fadeUpScroll = (delay: number = 0) => ({
   visible: {
     opacity: 1,
     y: 0,
-    transition: { delay, duration: 0.5, ease: "easeOut" },
+    transition: { delay, duration: 0.5 },
   },
 });
 
@@ -30,11 +30,13 @@ const recognition = {
 
 export default function CredibilitySection() {
   return (
-    <section className="relative bg-gradient-to-b from-[#030712] to-[#0B1120] py-20">
-      {/* Subtle glow */}
+    <section
+      className="relative bg-linear-to-b from-[rgb(var(--color-bg))] to-[rgb(var(--color-surface))] py-20"
+    >
+      {/* Subtle glow – keep accent color, it's fine */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#7C3AED]/20 to-transparent" />
-        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7C3AED]/5 blur-[140px]" />
+        <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-linear-to-r from-transparent via-[#7C3AED]/20 to-transparent" />
+        <div className="absolute left-1/2 top-1/2 h-125 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7C3AED]/5 blur-[140px]" />
       </div>
 
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
@@ -46,13 +48,13 @@ export default function CredibilitySection() {
           variants={fadeUpScroll(0)}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             My Background
           </h2>
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-muted">
             A foundation built on education and recognition.
           </p>
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6]" />
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-linear-to-r from-[#7C3AED] to-[#8B5CF6]" />
         </motion.div>
 
         {/* Timeline-style items */}
@@ -70,21 +72,21 @@ export default function CredibilitySection() {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#7C3AED]/10">
                 <GraduationCap className="h-6 w-6 text-[#7C3AED]" />
               </div>
-              <div className="mt-2 h-full w-px bg-gradient-to-b from-[#7C3AED]/30 to-transparent" />
+              <div className="mt-2 h-full w-px bg-linear-to-b from-[#7C3AED]/30 to-transparent" />
             </div>
 
             {/* Content */}
             <div className="flex-1 pb-8">
               <div className="flex flex-wrap items-baseline gap-3">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-foreground">
                   {education.title}
                 </h3>
-                <span className="inline-flex items-center gap-1 rounded-full border border-white/5 bg-white/5 px-3 py-0.5 text-xs text-gray-400">
+                <span className="inline-flex items-center gap-1 rounded-full border border-border/10 bg-surface/50 px-3 py-0.5 text-xs text-muted">
                   <Calendar size={12} />
                   {education.period}
                 </span>
               </div>
-              <p className="mt-2 max-w-xl text-gray-400">
+              <p className="mt-2 max-w-xl text-muted">
                 {education.description}
               </p>
             </div>
@@ -109,15 +111,15 @@ export default function CredibilitySection() {
             {/* Content */}
             <div className="flex-1 pb-4">
               <div className="flex flex-wrap items-baseline gap-3">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-foreground">
                   {recognition.title}
                 </h3>
-                <span className="inline-flex items-center gap-1 rounded-full border border-white/5 bg-white/5 px-3 py-0.5 text-xs text-gray-400">
+                <span className="inline-flex items-center gap-1 rounded-full border border-border/10 bg-surface/50 px-3 py-0.5 text-xs text-muted">
                   <Calendar size={12} />
                   {recognition.period}
                 </span>
               </div>
-              <p className="mt-2 max-w-xl text-gray-400">
+              <p className="mt-2 max-w-xl text-muted">
                 {recognition.description}
               </p>
             </div>

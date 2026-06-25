@@ -4,10 +4,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles  } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { projects } from "@/data/projects";
-import { GithubIcon } from "@/components/ui/icons";  // ← use custom icon
-
+import { GithubIcon } from "@/components/ui/icons";
 
 const featured = projects.filter((p) => p.featured).slice(0, 3);
 
@@ -16,7 +15,7 @@ const fadeUpScroll = (delay: number = 0) => ({
   visible: {
     opacity: 1,
     y: 0,
-    transition: { delay, duration: 0.5, ease: "easeOut" },
+    transition: { delay, duration: 0.5 },
   },
 });
 
@@ -24,9 +23,9 @@ export default function FeaturedProjects() {
   const [first, ...rest] = featured;
 
   return (
-    <section className="relative bg-gradient-to-b from-[#030712] to-[#0B1120] py-20">
+    <section className="relative bg-linear-to-b from-background to-surface py-20">
       {/* Subtle line separator */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#7C3AED]/20 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#7C3AED]/20 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
@@ -40,11 +39,11 @@ export default function FeaturedProjects() {
           <div>
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-[#7C3AED]" />
-              <h2 className="text-3xl font-bold text-white sm:text-4xl">
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
                 Featured Projects
               </h2>
             </div>
-            <p className="mt-2 text-gray-400">
+            <p className="mt-2 text-muted">
               A selection of projects I've built with passion and dedication.
             </p>
           </div>
@@ -60,18 +59,33 @@ export default function FeaturedProjects() {
           </Link>
         </motion.div>
 
+        {/* Introduction Text */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUpScroll(0.05)}
+          className="mt-8 max-w-3xl"
+        >
+          <p className="text-lg leading-relaxed text-muted">
+            Each project below represents a real‑world challenge I've solved,
+            from full‑stack web apps to Telegram bots and automation systems.
+            I focus on clean architecture, performance, and user experience.
+          </p>
+        </motion.div>
+
         {/* Hero Project – Large featured card (first one) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeUpScroll(0.1)}
-          whileHover={{ y: -4 }}
+          whileHover={{ y: -6 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          className="group relative mt-12 overflow-hidden rounded-xl border border-white/5 bg-[#0B1120] transition-all hover:border-[#7C3AED]/30 hover:shadow-primary"
+          className="group relative mt-12 overflow-hidden rounded-2xl border border-border/10 bg-surface shadow-lg transition-all hover:border-[#7C3AED]/30 hover:shadow-primary"
         >
           <div className="grid md:grid-cols-[1.4fr_1fr]">
-            {/* Image */}
+            {/* Image with gradient overlay */}
             <div className="relative aspect-video md:aspect-auto md:h-full">
               <Image
                 src={first.image}
@@ -79,7 +93,7 @@ export default function FeaturedProjects() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120] via-transparent to-transparent md:bg-gradient-to-l" />
+              <div className="absolute inset-0 bg-linear-to-r from-surface via-transparent to-transparent md:bg-linear-to-l" />
             </div>
 
             {/* Content */}
@@ -87,15 +101,15 @@ export default function FeaturedProjects() {
               <div className="mb-3 inline-flex w-fit rounded-full border border-[#7C3AED]/20 bg-[#7C3AED]/10 px-3 py-1 text-xs font-medium text-[#7C3AED]">
                 Featured Project
               </div>
-              <h3 className="text-2xl font-bold text-white transition-colors group-hover:text-[#7C3AED]">
+              <h3 className="text-2xl font-bold text-foreground transition-colors group-hover:text-[#7C3AED]">
                 {first.title}
               </h3>
-              <p className="mt-3 text-sm text-gray-400">{first.description}</p>
+              <p className="mt-3 text-sm text-muted">{first.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {first.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/5 bg-white/5 px-3 py-1 text-xs text-gray-300"
+                    className="rounded-full border border-border/10 bg-background/50 px-3 py-1 text-xs text-muted transition-colors group-hover:border-[#7C3AED]/20 group-hover:text-foreground/80"
                   >
                     {tag}
                   </span>
@@ -113,15 +127,15 @@ export default function FeaturedProjects() {
                   />
                 </Link>
                 {first.github && (
-              <a
-                href={first.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-[#7C3AED]"
-              >
-                <GithubIcon className="h-4 w-4" /> GitHub
-              </a>
-            )}
+                  <a
+                    href={first.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-[#7C3AED]"
+                  >
+                    <GithubIcon className="h-4 w-4" /> GitHub
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -143,9 +157,9 @@ export default function FeaturedProjects() {
                 borderColor: "rgba(124,58,237,0.3)",
               }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="group relative overflow-hidden rounded-xl border border-white/5 bg-[#0B1120] transition-all hover:bg-[#111827]"
+              className="group relative overflow-hidden rounded-2xl border border-border/10 bg-surface shadow-sm transition-all hover:bg-surface/80 hover:shadow-primary"
             >
-              {/* Image */}
+              {/* Image with gradient overlay on hover */}
               <div className="relative aspect-video overflow-hidden">
                 <Image
                   src={project.image}
@@ -153,27 +167,28 @@ export default function FeaturedProjects() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-[#7C3AED]">
+                <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-[#7C3AED]">
                   {project.title}
                 </h3>
-                <p className="mt-2 line-clamp-2 text-sm text-gray-400">
+                <p className="mt-2 line-clamp-2 text-sm text-muted">
                   {project.description}
                 </p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {project.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-white/5 bg-white/5 px-2.5 py-0.5 text-[10px] text-gray-300"
+                      className="rounded-full border border-border/10 bg-background/50 px-2.5 py-0.5 text-[10px] text-muted transition-colors group-hover:border-[#7C3AED]/20 group-hover:text-foreground/80"
                     >
                       {tag}
                     </span>
                   ))}
                   {project.tags.length > 3 && (
-                    <span className="text-[10px] text-gray-500">
+                    <span className="text-[10px] text-muted/60">
                       +{project.tags.length - 3}
                     </span>
                   )}
@@ -190,15 +205,15 @@ export default function FeaturedProjects() {
                     />
                   </Link>
                   {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-500 transition-colors hover:text-[#7C3AED]"
-                >
-                  <GithubIcon className="h-3.5 w-3.5" />
-                </a>
-              )}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted transition-colors hover:text-[#7C3AED]"
+                    >
+                      <GithubIcon className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

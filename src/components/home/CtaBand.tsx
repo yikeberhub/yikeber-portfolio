@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CtaBand() {
   return (
-    <section className="relative bg-[#0B1120] py-16">
+    <section className="relative bg-surface py-16">
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,19 +15,19 @@ export default function CtaBand() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold text-foregroundsm:text-4xl">
             Ready to build something{" "}
-            <span className="bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent">
               amazing together?
             </span>
           </h2>
-          <p className="mt-3 text-gray-400">
+          <p className="mt-3 text-muted">
             Let's discuss your project and turn your ideas into reality.
           </p>
           <div className="mt-6">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-[#7C3AED] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#8B5CF6]"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#7C3AED] px-8 py-3 text-sm font-semibold text-foregroundtransition-colors hover:bg-[#8B5CF6]"
             >
               Get in touch
               <ArrowRight size={16} />
