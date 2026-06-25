@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yikeber Misganaw — Portfolio Website
 
-## Getting Started
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Site-7C3AED?style=for-the-badge\&logo=vercel)](https://yikeber-portfolio.vercel.app)
 
-First, run the development server:
+A modern, responsive portfolio website built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. Designed with a premium dark-first aesthetic to showcase projects, skills, services, and professional experience.
+
+## 🌐 Live Demo
+
+**Website:** https://yikeber-portfolio.vercel.app
+
+---
+
+## ✨ Features
+
+* Modern dark-first UI
+* Responsive design for all devices
+* Smooth animations with Framer Motion
+* Project showcase section
+* Services and skills overview
+* Experience timeline
+* Contact section
+* Optimized performance with Next.js App Router
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js 15 (App Router)
+* React
+* TypeScript
+
+### Styling & UI
+
+* Tailwind CSS v4
+* shadcn/ui
+* Lucide React Icons
+
+### Animation
+
+* Framer Motion
+
+### Deployment
+
+* Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/                # App Router pages
+├── components/         # Reusable UI components
+├── data/               # Portfolio content & configuration
+├── lib/                # Utilities and helpers
+├── types/              # TypeScript definitions
+└── styles/             # Global styles
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/yikeber-portfolio.git
+cd yikeber-portfolio
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Production Build
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is optimized for deployment on Vercel.
 
-## Deploy on Vercel
+```bash
+vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Or deploy directly through the Vercel dashboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 About Me
+
+I'm **Yikeber Misganaw**, a Software Engineer specializing in:
+
+* Full-Stack Web Development
+* Django & Laravel Backend Development
+* React & Next.js Applications
+* E-commerce Platforms
+* Telegram Bot Development
+
+---
+
+## 📬 Contact
+
+* Email: [yikeber50@gmail.com](mailto:yikeber50@gmail.com)
+* LinkedIn: Add your LinkedIn URL
+* GitHub: https://github.com/YOUR_USERNAME
+* Portfolio: https://yikeber-portfolio.vercel.app
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
