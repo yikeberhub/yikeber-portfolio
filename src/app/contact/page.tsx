@@ -120,7 +120,7 @@ export default function ContactPage() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-border/10 bg-white/5 px-4 py-1.5 text-sm text-[#8B5CF6]">
             <Sparkles size={14} />
-            Let's Connect
+            Let us Connect
           </div>
           <h1 className="mt-6 text-4xl font-bold text-foreground sm:text-5xl">
             Get in Touch
@@ -170,7 +170,7 @@ export default function ContactPage() {
           >
             <h2 className="text-xl font-semibold text-foreground">Send a Message</h2>
             <p className="mt-1 text-sm text-muted">
-              I'll get back to you within 24 hours.
+              I will get back to you within 24 hours.
             </p>
 
             {isSubmitted ? (
@@ -180,7 +180,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-foreground">Message Sent!</h3>
                 <p className="text-muted">
-                  I'll get back to you soon. Thanks for reaching out!
+                  I will get back to you soon. Thanks for reaching out!
                 </p>
               </div>
             ) : (
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     className="mt-1 w-full rounded-lg border border-border/10 bg-background px-4 py-2.5 text-foreground placeholder-gray-500 transition-colors focus:border-[#7C3AED] focus:outline-none focus:ring-1 focus:ring-[#7C3AED]"
-                    placeholder="What's this about?"
+                    placeholder="What is this about?"
                   />
                 </div>
                 <div>

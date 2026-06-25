@@ -55,7 +55,7 @@ export default function ProjectsPage() {
           </div>
           <h1 className="mt-6 text-4xl font-bold text-foreground sm:text-5xl">Projects</h1>
           <p className="mt-3 max-w-2xl mx-auto text-muted">
-            A collection of projects I've built with passion and dedication.
+            A collection of projects I have built with passion and dedication.
             Each one solves a real-world problem.
           </p>
         </motion.div>

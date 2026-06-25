@@ -393,7 +393,7 @@ export default function AboutPage() {
             Want to work together?
           </h3>
           <p className="mt-2 text-muted">
-            I'm always open to discussing new projects and opportunities.
+            I am always open to discussing new projects and opportunities.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link

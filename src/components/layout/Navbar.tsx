@@ -108,8 +108,7 @@ export default function Navbar() {
                 href="/contact"
                 className="mt-2 inline-flex w-full justify-center rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-foreground"
               >
-                Let's Talk
-              </Link>
+Let&apos;s Talk              </Link>
             </li>
           </ul>
         </div>

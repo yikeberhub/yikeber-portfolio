@@ -22,7 +22,7 @@ export default function CtaBand() {
             </span>
           </h2>
           <p className="mt-3 text-muted">
-            Let's discuss your project and turn your ideas into reality.
+            Let us discuss your project and turn your ideas into reality.
           </p>
           <div className="mt-6">
             <Link

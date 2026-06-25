@@ -44,7 +44,7 @@ export default function FeaturedProjects() {
               </h2>
             </div>
             <p className="mt-2 text-muted">
-              A selection of projects I've built with passion and dedication.
+              A selection of projects I have built with passion and dedication.
             </p>
           </div>
           <Link
@@ -68,7 +68,7 @@ export default function FeaturedProjects() {
           className="mt-8 max-w-3xl"
         >
           <p className="text-lg leading-relaxed text-muted">
-            Each project below represents a real‑world challenge I've solved,
+            Each project below represents a real‑world challenge I have solved,
             from full‑stack web apps to Telegram bots and automation systems.
             I focus on clean architecture, performance, and user experience.
           </p>

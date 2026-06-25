@@ -173,7 +173,7 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
           href="/contact"
           className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#7C3AED] px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-[#8B5CF6]"
         >
-          Let's Talk
+          Let&apos;s Talk
         </Link>
       </motion.div>
     </>

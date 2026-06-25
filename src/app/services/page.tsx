@@ -161,7 +161,7 @@ export default function ServicesPage() {
               {
                 title: "Clear Communication",
                 description:
-                  "I keep you informed throughout the process, ensuring we're always aligned.",
+                  "I keep you informed throughout the process, ensuring we are always aligned.",
               },
               {
                 title: "Reliable Delivery",
@@ -194,7 +194,7 @@ export default function ServicesPage() {
             Ready to build something amazing?
           </h3>
           <p className="mt-2 text-muted">
-            Let's discuss your project and how I can help you achieve your goals.
+            Let us discuss your project and how I can help you achieve your goals.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
