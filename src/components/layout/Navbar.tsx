@@ -71,8 +71,8 @@ export default function Navbar() {
             href="/contact"
             className="hidden rounded-lg bg-[#7C3AED] px-5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-[#8B5CF6] md:inline-flex"
           >
-            Let's Talk
-          </Link>
+  Let&apos;s Talk          
+</Link>
 
           <button
             aria-label="Toggle menu"

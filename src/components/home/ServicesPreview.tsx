@@ -6,12 +6,13 @@ import { services } from "@/data/services";
 import * as Icons from "lucide-react";
 
 // Map icon strings to Lucide components
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ElementType> = {
   Send: Icons.Send,
   Cpu: Icons.Cpu,
   Database: Icons.Database,
   Layout: Icons.Layout,
-  // add more if needed
+  
+
 };
 
 const fadeUpScroll = (delay: number = 0) => ({

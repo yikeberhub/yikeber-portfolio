@@ -44,9 +44,7 @@ export default function TrustStrip() {
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             My Journey in Numbers
           </h2>
-          <p className="mt-2 text-muted">
-            A snapshot of the experience and impact I've built over the years.
-          </p>
+          <p className="mt-2 text-muted">A snapshot of the experience and impact I&apos;ve built over the years.</p>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-linear-to-r from-[#7C3AED] to-[#8B5CF6]" />
         </motion.div>
 

@@ -167,7 +167,7 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
         <Sparkles className="mx-auto h-8 w-8 text-[#7C3AED]" />
         <h3 className="mt-3 text-xl font-semibold text-foreground">Interested in this project?</h3>
         <p className="mt-1 text-sm text-muted">
-          I'm always open to discussing my work and collaborations.
+          I am always open to discussing my work and collaborations.
         </p>
         <Link
           href="/contact"
